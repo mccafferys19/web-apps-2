@@ -4,12 +4,15 @@ Rails.application.routes.draw do
   get("/cards", {:controller => "cards", :action => "index"})
   get("/bitcoins", {:controller => "bitcoins", :action => "index"})
 
-  resources "companies"
+  resources "companies" # all 7 RESTful routes in any REST design pattern:
   # get("/companies", {:controller => "companies", :action => "index"})
   # get("/companies/new", {:controller => "companies", :action => "new"})
   # get("/companies/:id", {:controller => "companies", :action => "show"})
   # post("/companies", {:controller => "companies", :action => "create"}) 
-  
+  # get("/companies/:id/edit", {:controller => "companies", :action => "edit"})
+  # patch("/companies/:id", {:controller => "companies", :action => "update"})
+  # delete("/companies/:id", {:controller => "companies", :action => "destroy"})
+
   resources "contacts"
   # get("/contacts", {:controller => "contacts", :action => "index"})
 
