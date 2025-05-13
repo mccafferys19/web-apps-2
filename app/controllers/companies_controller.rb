@@ -10,7 +10,7 @@ class CompaniesController < ApplicationController
     # find a Company
     @company = Company.find_by({"id" => params["id"]})
     # p @company
-    @contacts = Contacts.where({"company_id" => @company["id"]})
+    @contacts = Contact.where({"company_id" => @company["id"]})
     # render companies/show view with details about Company
   end
 
